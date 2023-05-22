@@ -11,16 +11,19 @@ const getWelcome = (req, res) => {
 		message: "Super la fête chez Oyhana !",
 	});
 };
+
 const postWelcome = (req, res) => {
 	res.json({
 		message: "Je suis nouvelle !",
 	});
 };
+
 const putWelcome = (req, res) => {
 	res.json({
 		message: "Je me met à jour !",
 	});
 };
+
 const deleteWelcome = (req, res) => {
 	res.json({
 		message: "C'est ciao !",
