@@ -15,12 +15,30 @@ const getWelcome = (req, res) => {
 		message: "Salut la compagnie !",
 	});
 };
+const postWelcome = (req, res) => {
+	res.json({
+		message: "Je suis nouveau !",
+	});
+};
+const putWelcome = (req, res) => {
+	res.json({
+		message: "Je me met à jour !",
+	});
+};
+const deleteWelcome = (req, res) => {
+	res.json({
+		message: "C'est ciao !",
+	});
+};
 
 // .get(la route, callback )
 // Pour tester ma route, je vais sur postman / insomnia / navigateur (uniquement pour le get)
 // avec l'url suivante POUR MON CAS
 // http://localhost:5500
+app.post("/", postWelcome);
 app.get("/", getWelcome);
+app.put("/", putWelcome);
+app.delete("/", deleteWelcome);
 
 //         PORT, CALLBACK = Une fonction dans une fonction
 app.listen(PORT, (err) => {
