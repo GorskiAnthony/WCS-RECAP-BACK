@@ -8,7 +8,7 @@ const getWelcome = (req, res) => {
 	// console.log("Salut la compagnie !");
 	// res.send renvoi une donnée vers le périphérique qui l'a appelé
 	res.json({
-		message: "Salut la compagnie !",
+		message: "Super la fête chez Oyhana !",
 	});
 };
 const postWelcome = (req, res) => {
