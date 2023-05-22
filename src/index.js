@@ -4,6 +4,8 @@ const PORT = 5500;
 
 const mainRouter = require("./routes/mainRoute");
 
+app.use(express.json());
+
 app.use("/api", mainRouter);
 
 //         PORT, CALLBACK = Une fonction dans une fonction
