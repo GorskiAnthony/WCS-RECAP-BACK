@@ -3,18 +3,10 @@ const app = express();
 const PORT = 5500;
 
 const homeRouter = require("./routes/homeRoute");
-
-const userController = require("./controllers/userController");
+const userRouter = require("./routes/userRoute");
 
 app.use("/api", homeRouter);
-
-/**
- * USER
- */
-app.post("/users", userController.postUser);
-app.get("/users", userController.getUser);
-app.put("/users", userController.putUser);
-app.delete("/users", userController.deleteUser);
+app.use("/users", userRouter);
 
 //         PORT, CALLBACK = Une fonction dans une fonction
 app.listen(PORT, (err) => {
