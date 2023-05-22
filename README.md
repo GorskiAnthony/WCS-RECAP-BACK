@@ -25,6 +25,14 @@ npm run start
 
 ## 🎯 Ce qu'il faut retenir
 
+-   Les scripts npm
+
+```shell
+$ node index.js
+# Avec run entre parenthèses car optionnel.
+$ npm (run) start
+```
+
 ## Author
 
 👤 **Anthony Gorski**
