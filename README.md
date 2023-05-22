@@ -33,6 +33,26 @@ $ node index.js
 $ npm (run) start
 ```
 
+```js
+app.listen(5500, () => {
+	console.log("Je suis run sur le port: 5500");
+});
+```
+
+Avec la commande `npm start` celui ci est lancé par node, hors, si nous faisons une modification, celle ci ne sera pas prise en compte, il faut donc relancer le serveur à chaque fois.
+
+Pour pallier à ce defaut, nous allons installer `nodemon` et mettre à jour le script
+
+```shell
+$ npm install nodemon --save-dev
+```
+
+```js
+"scripts": {
+    "start": "nodemon src/index.js"
+  },
+```
+
 ## Author
 
 👤 **Anthony Gorski**
@@ -48,3 +68,7 @@ Give a ⭐️ if this project helped you!
 
 👋 Qui suis-je ?
 Je suis **Anthony Gorski**, développeur web et formateur à la [Wild Code School](https://www.wildcodeschool.com/fr-FR).
+
+```
+
+```
