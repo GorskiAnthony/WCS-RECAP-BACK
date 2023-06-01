@@ -83,14 +83,20 @@ const putUser = (req, res) => {
 };
 
 const deleteUser = (req, res) => {
-	// méthode 1
 	const { id } = req.params;
-	res.json({
-		message: `User ${id} deleted`,
-	});
-	// res.json({
-	// 	message: `User ${req.params.id} deleted`,
-	// });
+	userModel
+		.deleteUser(id)
+		.then(([result]) => {
+			if (result.affectedRows === 1) {
+				res.status(200).json({ message: "User deleted" });
+			} else {
+				res.status(500).json({ message: "User not found" });
+			}
+		})
+		.catch((err) => {
+			console.error(err);
+			res.status(500).send("Error deleting user");
+		});
 };
 
 module.exports = {

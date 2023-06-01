@@ -14,8 +14,13 @@ const addUser = (user) => {
 	// return db.query("INSERT INTO formateur (name) VALUES (?)", [user.name]);
 };
 
+const deleteUser = (id) => {
+	return db.query("DELETE FROM formateur WHERE id = ?", [id]);
+};
+
 module.exports = {
 	findAll,
 	findOne,
 	addUser,
+	deleteUser,
 };
