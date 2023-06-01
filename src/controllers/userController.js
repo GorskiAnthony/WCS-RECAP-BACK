@@ -12,7 +12,15 @@ const getUser = (req, res) => {
 	// res.send renvoi une donnée vers le périphérique qui l'a appelé
 	res.json({
 		user,
-		limit: parseInt(req.query.limit, 10),
+	});
+};
+const getOneUser = (req, res) => {
+	const user = userModel.findOne(req.params.id);
+	// Ici, le console.log n'est disponible QUE pour le backend
+	// console.log("Salut la compagnie !");
+	// res.send renvoi une donnée vers le périphérique qui l'a appelé
+	res.json({
+		user,
 	});
 };
 
@@ -51,6 +59,7 @@ const deleteUser = (req, res) => {
 
 module.exports = {
 	getUser,
+	getOneUser,
 	putUser,
 	postUser,
 	deleteUser,
