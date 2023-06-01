@@ -14,15 +14,6 @@ const getUser = (req, res) => {
 			});
 		})
 		.catch((err) => console.error(err));
-
-	/**
-	 * const allUsers = await userModel.findAll();
-	 * const users = allUsers[0];
-	 */
-
-	// Ici, le console.log n'est disponible QUE pour le backend
-	// console.log("Salut la compagnie !");
-	// res.send renvoi une donnée vers le périphérique qui l'a appelé
 };
 const getOneUser = async (req, res) => {
 	try {

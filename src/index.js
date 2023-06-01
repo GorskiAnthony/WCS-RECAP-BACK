@@ -1,10 +1,17 @@
 const express = require("express");
 const app = express();
 const PORT = 5500;
+const cors = require("cors");
 
 const mainRouter = require("./routes/mainRoute");
 
 app.use(express.json());
+
+app.use(
+	cors({
+		origin: "http://localhost:5173",
+	})
+);
 
 app.use("/api", mainRouter);
 
